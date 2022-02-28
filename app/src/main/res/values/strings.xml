@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">VideoList</string>
+    <string name="date_vid">date</string>
+    <string name="avatar_url">avatarURL</string>
+    <string name="description">description</string>
+    <string name="title">title</string>
+    <string name="username">username</string>
+    <string name="email">email</string>
+
+</resources>
