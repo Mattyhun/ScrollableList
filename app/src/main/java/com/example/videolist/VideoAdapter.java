@@ -17,12 +17,12 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieHolder> {
+public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.MovieHolder> {
 
     private final Context context;
     private final List<Video> videoList;
 
-    public MovieAdapter(Context context, List<Video> videos) {
+    public VideoAdapter(Context context, List<Video> videos) {
         this.context = context;
         videoList = videos;
     }

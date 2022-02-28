@@ -29,13 +29,13 @@ public class DetailActivity extends AppCompatActivity {
         String mdescription = bundle.getString("description");
         String mdate = bundle.getString("date");
         String musername = bundle.getString("username");
-        String meail = bundle.getString("email");
+        String memail = bundle.getString("email");
 
         Glide.with(this).load(mavatarURL).into(imageView);
         date.setText(mdate);
         title.setText(mtitle);
         description.setText(mdescription);
         username.setText(musername);
-        email.setText(meail);
+        email.setText(memail);
     }
 }

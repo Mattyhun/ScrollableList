@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RequestQueue requestQueue;
     private List<Video> videoList;
+    private static final String url = "https://android-intern-homework.vercel.app/api";  // API ENDPOINT
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,12 +40,11 @@ public class MainActivity extends AppCompatActivity {
 
         videoList = new ArrayList<>();
 
-        fetchMovies();
+        fetchVideos();
     }
 
-    private void fetchMovies() { // SAVE DATA
+    private void fetchVideos() { // SAVE DATA
 
-        String url = "https://android-intern-homework.vercel.app/api";
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null,
 
                 new Response.Listener<JSONObject>() {
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-                        MovieAdapter adapter = new MovieAdapter(MainActivity.this, videoList);
+                        VideoAdapter adapter = new VideoAdapter(MainActivity.this, videoList);
                         recyclerView.setAdapter(adapter);
                     }
                 }, new Response.ErrorListener() {
